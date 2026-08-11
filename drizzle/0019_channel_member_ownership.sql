@@ -1,0 +1,10 @@
+ALTER TABLE `sales_channels` ADD `owner_member_id` integer;
+ALTER TABLE `sales_channels` ADD `application_status` text DEFAULT 'admin_created' NOT NULL;
+ALTER TABLE `sales_channels` ADD `application_message` text DEFAULT '' NOT NULL;
+ALTER TABLE `sales_channels` ADD `admin_review_note` text DEFAULT '' NOT NULL;
+ALTER TABLE `sales_channels` ADD `applied_at` text;
+ALTER TABLE `sales_channels` ADD `approved_at` text;
+ALTER TABLE `sales_channels` ADD `publication_requested_at` text;
+ALTER TABLE `sales_channels` ADD `published_at` text;
+CREATE UNIQUE INDEX `sales_channels_owner_member_unique` ON `sales_channels` (`owner_member_id`);
+CREATE INDEX `sales_channels_application_status_idx` ON `sales_channels` (`application_status`,`updated_at`);

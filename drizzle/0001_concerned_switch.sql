@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `orders_member_idempotency_idx` ON `orders` (`member_id`,`idempotency_key`);

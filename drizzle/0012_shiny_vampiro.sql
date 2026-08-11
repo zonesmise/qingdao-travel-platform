@@ -1,0 +1,1 @@
+ALTER TABLE `product_catalog_details` ADD `subcategory` text DEFAULT '' NOT NULL;

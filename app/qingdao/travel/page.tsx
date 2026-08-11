@@ -1,0 +1,4 @@
+import { QingdaoPage } from "../../../components/QingdaoShell";
+const areas=["시남구","시북구","노산구","황도구","성양구"];
+const topics=["관광지","맛집·카페","교통·결제","날씨·옷차림","여행 안전","현지 행사"];
+export default function Travel(){return <QingdaoPage eyebrow="EXPLORE QINGDAO" title="칭다오 여행정보" description="상품을 권하기 전에, 신뢰할 수 있는 여행정보부터 제공합니다."><div className="qg-filter"><b>지역</b>{areas.map(x=><button key={x}>{x}</button>)}</div><div className="qg-topic-grid">{topics.map((x,i)=><article key={x}><i>0{i+1}</i><h2>{x}</h2><p>한국 여행자가 실제로 궁금해하는 핵심 정보와 현지 이용 팁을 확인하세요.</p><a href="/qingdao/guide">정보 보기 →</a></article>)}</div><section className="qg-trust-note"><div><span>TRAVEL FIRST</span><h2>여행 중에는 여행에만 집중하세요.</h2><p>쇼핑은 강요하지 않습니다. 귀국 후 필요할 때 여행자 스토어에서 다시 확인할 수 있습니다.</p></div><a href="/qingdao/planner">내 일정 만들기 →</a></section></QingdaoPage>}

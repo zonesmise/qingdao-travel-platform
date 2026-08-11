@@ -1,0 +1,2 @@
+ALTER TABLE `products` ADD `style_number` text DEFAULT '' NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX `products_style_number_unique` ON `products` (`style_number`) WHERE "products"."style_number" != '';
